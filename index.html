@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Dynamic Shopping Cart</title>
+
+    <!-- Import tailwind -->
+    <link href="./src/output.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./script/app.js" defer></script>
+
+</head>
+<body class="w-full h-screen bg-gray-600 place-items-center pt-4 pb-4">
+
+    <main class="w-3/4 gap-4 bg-zinc-900 p-4 min-h-full
+                md:max-w-[655px] ">
+
+        <h1 class="text-white text-[21px] md:text-[25px] text-center mt-3 mb-3">Dynamic Shopping Cart</h1>
+
+        <section class="bg-gray-50 p-6 flex flex-col justify-between h-max">
+
+            <button class="btn addBttn" onclick="addModal.showModal()">Add</button>
+
+            <section class="bg-gray-50 gap-3 p-6 h-full flex flex-col z-0">
+                
+                <ul id="cart">
+                </ul>
+
+            </section>
+
+            <section class="flex justify-between p-3">
+                <h3 class="">Total: </h3>
+                <span id="total-price">0</span>
+            </section>
+
+        </section>
+    </main>
+    
+    <dialog id="addModal" class="modal">
+        <div class="modal-box">
+            <section class="bg-gray-50 gap-3 p-3">
+                <section class="flex flex-col gap-4" id="product-container">
+                    <input type="text" id="product-name" placeholder="Product Name">
+                    <input type="text" id="product-price" placeholder="Product Price">
+                    <input type="number" id="product-qty" placeholder="Product Quantity">
+                    
+                </section>
+                <button data-theme="none" class="bg-zinc-900 btn btn-neutral text-white addButton mx-auto mt-3 mb-3" id="add-product">Add Product</button>
+                <form method="dialog">
+                    <button class="btn">Close</button>
+                </form>
+            </section>
+        </div>
+    </dialog>
+
+</body>
+</html>
