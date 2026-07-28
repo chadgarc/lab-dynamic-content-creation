@@ -4,6 +4,10 @@ body {
     line-height: 1.6;
 }
 
+main{
+    min-width: 365px;
+}
+
 #product-container {
     display: flex;
     gap: 0.625rem;
